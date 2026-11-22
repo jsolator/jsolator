@@ -1,9 +1,9 @@
 {
-  "version": "1.3.0",
-  "url": "https://github.com/jsolator/jsolator/releases/download/v1.3.0/Jsolator-1.3.0.zip",
-  "signature": "js+eTwxNeB0kRze+KDZ/KfPcBHXifD9dTPvBKho236tMLNZFkMvwT6nDvB/HNp7eRNJa6rhdzga3B8OkZzovBg==",
-  "size": 88303720,
-  "notes": "Jsolator is now a music player too: search or paste a link to play, split when you want. Playlists, favourites, a music-reactive play bar and automatic updates.",
-  "download": "https://github.com/jsolator/jsolator/releases/download/v1.3.0/Jsolator-1.3.0.dmg",
-  "downloadSize": 101823117
+  "version": "1.4.0",
+  "url": "https://github.com/jsolator/jsolator/releases/download/v1.4.0/Jsolator-1.4.0.zip",
+  "signature": "AJuKmb6D9yNdh7Cvyim3yLn3rBT4TJdOjoRKP48rk069MShHvs5nM6IQgWrRZkiFDy25kY/wkm+uRp/BabtLAQ==",
+  "size": 128681519,
+  "notes": "Sheet music: Jsolator now writes a lead sheet, chord chart, full score, guitar tab and instrument parts from a split song, follows along as it plays, lets you fix notes and chords by hand, and exports PDF, MusicXML and MIDI. Also: songs from links start playing in a few seconds, richer chords, and library filters by artist, genre and composer.",
+  "download": "https://github.com/jsolator/jsolator/releases/download/v1.4.0/Jsolator-1.4.0.dmg",
+  "downloadSize": 143702900
 }

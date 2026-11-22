@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jsolator — play any song, pull it apart</title>
-<meta name="description" content="Jsolator is a free Mac app that plays your music and splits any song into vocals, drums, bass, guitar and piano. It runs entirely on your Mac.">
+<meta name="description" content="Jsolator is a free Mac app that plays your music, splits any song into vocals, drums, bass, guitar and piano, and writes the sheet music. Everything runs on your own Mac.">
 <meta property="og:title" content="Jsolator — play any song, pull it apart">
-<meta property="og:description" content="A free Mac app that splits any song into vocals, drums, bass, guitar and piano. Runs entirely on your Mac.">
+<meta property="og:description" content="A free Mac app that splits any song into vocals, drums, bass, guitar and piano, and writes the sheet music. Runs entirely on your Mac.">
 <meta property="og:image" content="https://jsolator.com/assets/card.jpg">
 <meta property="og:url" content="https://jsolator.com/">
 <meta name="twitter:card" content="summary_large_image">
@@ -96,12 +96,12 @@
   <div class="hero" id="download">
     <img class="icon" src="assets/icon.png" alt="Jsolator app icon" width="132" height="132">
     <h1>Play any song. Pull it apart.</h1>
-    <p class="lede">Jsolator is a free Mac app that plays your music and splits any song into vocals, drums, bass, guitar and piano. Everything runs on your own Mac.</p>
-    <a class="btn" data-download href="https://github.com/jsolator/jsolator/releases/download/v1.3.0/Jsolator-1.3.0.dmg">
+    <p class="lede">Jsolator is a free Mac app that plays your music, splits any song into vocals, drums, bass, guitar and piano, and writes the sheet music. Everything runs on your own Mac.</p>
+    <a class="btn" data-download href="https://github.com/jsolator/jsolator/releases/download/v1.4.0/Jsolator-1.4.0.dmg">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>
       Download for Mac
     </a>
-    <div class="meta"><span data-version>Version 1.3.0</span> · <span data-size>97 MB</span> · Free · Apple Silicon Mac (M1 or newer), macOS 14 or later</div>
+    <div class="meta"><span data-version>Version 1.4.0</span> · <span data-size>97 MB</span> · Free · Apple Silicon Mac (M1 or newer), macOS 14 or later</div>
     <div class="shot"><img src="assets/mixer.jpg" alt="Jsolator showing a song split into lead vocal, backing vocals, drums, bass, guitar, piano and other, with lyrics alongside" width="1700" height="1287"></div>
   </div>
 
@@ -116,6 +116,20 @@
       <div class="card"><div class="dot">4</div><h3>Lyrics, key, tempo, chords</h3><p>Timed lyrics follow the singing. The key, tempo and chords are worked out for you.</p></div>
       <div class="card"><div class="dot">5</div><h3>Playlists and favourites</h3><p>Keep the songs you practise in playlists, mark favourites, and let the library play through.</p></div>
       <div class="card"><div class="dot">6</div><h3>Export anything</h3><p>Save any stem, or your own mix of them, as WAV, FLAC or M4A.</p></div>
+      <div class="card"><div class="dot">7</div><h3>Sheet music from any song</h3><p>A lead sheet with melody, chords and lyrics, a chord chart, a full score, guitar tab and a part for each instrument, written from the stems in under a minute.</p></div>
+      <div class="card"><div class="dot">8</div><h3>Fix it by hand</h3><p>Click a note to change it, drag it up or down, retype a chord, halve the tempo or move the bar line. Every change can be undone.</p></div>
+      <div class="card"><div class="dot">9</div><h3>PDF, MusicXML and MIDI</h3><p>Print the score, or open it in MuseScore, Sibelius, Finale, Dorico, Logic or GarageBand.</p></div>
+    </div>
+  </section>
+
+  <section id="sheet">
+    <div class="split">
+      <div>
+        <div class="kicker">New in 1.4</div>
+        <h2>It writes the sheet music</h2>
+        <p class="sub">Split a song, press Sheet, and Jsolator listens to each stem and writes it down. The notes light up as the song plays, the score changes key with the player, and Hear plays the written notes along with the recording so a wrong one stands out. It is a draft to check by ear, and the built-in editor makes that quick.</p>
+      </div>
+      <div class="shot"><img src="assets/sheet.jpg" alt="Jsolator showing a lead sheet with melody, chord symbols and lyrics, the note being sung highlighted in red. Song: Bully by Josh Woodward, CC BY." width="1700" height="1292" loading="lazy"></div>
     </div>
   </section>
 
@@ -133,7 +147,7 @@
   <section id="install">
     <div class="kicker">Install</div>
     <h2>Up and running in a minute</h2>
-    <p class="sub">The download is small. The separation model (about 700 MB) is fetched once, the first time you split a song.</p>
+    <p class="sub">The download is small. The separation model (about 700 MB) is fetched once, the first time you split a song, and the sheet music models (about 250 MB) the first time you write a score.</p>
     <ol class="steps">
       <li><b>Download</b> and open <b>Jsolator.dmg</b>, then drag Jsolator into your Applications folder.</li>
       <li><b>Open Jsolator.</b> The first time, macOS may say it can't verify the app. If it does, open <b>System Settings → Privacy &amp; Security</b>, scroll down and click <b>Open Anyway</b>. You only do this once.</li>
@@ -148,23 +162,24 @@
     <details><summary>Which Macs does it run on?</summary><p>Macs with Apple Silicon (M1, M2, M3, M4 or newer) on macOS 14 or later. 16 GB of memory is comfortable; 8 GB works in the app's low-memory mode. Intel Macs are not supported.</p></details>
     <details><summary>How long does a split take?</summary><p>On a recent Mac, about half a minute for a four-minute song at Fast quality, about a minute at High, and around three minutes at Studio quality.</p></details>
     <details><summary>How do I get updates?</summary><p>Jsolator checks this site for a new version and offers it in the app. One click downloads it, checks that it really comes from us, and reopens the app on the new version.</p></details>
-    <details><summary>Does my music leave my Mac?</summary><p>No. Splitting, lyrics from the vocal, key and chord detection all run on your Mac. Looking up lyrics online sends only the song's title, artist and length.</p></details>
+    <details><summary>How accurate is the sheet music?</summary><p>The sung melody, the bass line and the chords usually come out well. Piano is good, guitar and other instruments are rougher, and drums are a sketch. Treat every score as a draft: play it with Follow and Hear on, then fix what is wrong in the editor or export it to your notation app.</p></details>
+    <details><summary>Does my music leave my Mac?</summary><p>No. Splitting, sheet music, lyrics from the vocal, key and chord detection all run on your Mac. Looking up lyrics online sends only the song's title, artist and length.</p></details>
     <details><summary>What can I use it with?</summary><p>Music you own or have the right to use. Please respect the rights of artists and the terms of any service you take music from.</p></details>
   </section>
 
   <div class="cta">
     <h2>Give it a spin</h2>
     <p class="sub" style="margin: 0 auto 26px;">Free for Apple Silicon Macs.</p>
-    <a class="btn" data-download href="https://github.com/jsolator/jsolator/releases/download/v1.3.0/Jsolator-1.3.0.dmg">
+    <a class="btn" data-download href="https://github.com/jsolator/jsolator/releases/download/v1.4.0/Jsolator-1.4.0.dmg">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>
       Download for Mac
     </a>
-    <div class="meta"><span data-version>Version 1.3.0</span> · <span data-size>97 MB</span></div>
+    <div class="meta"><span data-version>Version 1.4.0</span> · <span data-size>97 MB</span></div>
   </div>
 
   <footer>
     <p>© <span id="year">2026</span> Jsolator. Made for people who love records.</p>
-    <p>Song shown in the screenshots: “Here Lies” and “Swansong” by Josh Woodward, used under a Creative Commons Attribution licence.</p>
+    <p>Song shown in the screenshots: “Here Lies”, “Swansong” and “Bully” by Josh Woodward, used under a Creative Commons Attribution licence.</p>
   </footer>
 </div>
 <script>
