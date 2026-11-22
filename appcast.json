@@ -1,9 +1,9 @@
 {
-  "version": "1.4.3",
-  "url": "https://github.com/jsolator/jsolator/releases/download/v1.4.3/Jsolator-1.4.3.zip",
-  "signature": "rZJQRetcifj7tmqKqRZmJ55Gz/Hq1yBR4CG2zChB051SWpBaz/vlMfhoieHbeakYr6vK7WthR51PMaqVEgHQDw==",
-  "size": 128701269,
-  "notes": "Songs you only added to listen to now have a one-click Sheet Music button that splits the song into the full band and then writes its sheet music. The first-run model download and the offline sheet fallback were also tested.",
-  "download": "https://github.com/jsolator/jsolator/releases/download/v1.4.3/Jsolator-1.4.3.dmg",
-  "downloadSize": 143290101
+  "version": "1.5.0",
+  "url": "https://github.com/jsolator/jsolator/releases/download/v1.5.0/Jsolator-1.5.0.zip",
+  "signature": "x3uUjDLbEs3sU3AWRwkhK4JcNJk1ECnJT52F45HlM5gdxsqHbw0c7ITGq/ZF8jvaAoOg/S6cHjTDf34VcalkDw==",
+  "size": 128767970,
+  "notes": "Import sheet music from a PDF, a photo or MusicXML, then edit it, play it and change its key. New Key menu moves a whole sheet to another key. Cancelling a split no longer removes the song, sheet music now hears both stereo channels, and 16 other fixes.",
+  "download": "https://github.com/jsolator/jsolator/releases/download/v1.5.0/Jsolator-1.5.0.dmg",
+  "downloadSize": 144947732
 }
