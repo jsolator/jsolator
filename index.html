@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jsolator — play any song, pull it apart</title>
+<meta name="description" content="Jsolator is a free Mac app that plays your music and splits any song into vocals, drums, bass, guitar and piano. It runs entirely on your Mac.">
+<meta property="og:title" content="Jsolator — play any song, pull it apart">
+<meta property="og:description" content="A free Mac app that splits any song into vocals, drums, bass, guitar and piano. Runs entirely on your Mac.">
+<meta property="og:image" content="https://jsolator.com/assets/card.jpg">
+<meta property="og:url" content="https://jsolator.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.png">
+<style>
+  :root {
+    --bg: #17120e; --bg2: #221a14; --panel: rgba(245,232,209,.05); --stroke: rgba(245,232,209,.12);
+    --cream: #f5e8d1; --dim: rgba(245,232,209,.66); --faint: rgba(245,232,209,.42);
+    --brass: #dbad5c; --brass2: #b88540; --orange: #e07033; --ink: #29190d; --burgundy: #5e1a1c;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--cream); font-family: var(--sans); line-height: 1.55;
+    background-image: radial-gradient(1100px 620px at 50% -120px, rgba(219,173,92,.16), transparent 70%),
+                      radial-gradient(900px 500px at 100% 40%, rgba(94,26,28,.22), transparent 70%);
+    background-repeat: no-repeat; -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--brass); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  header { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
+  .brand { display: flex; align-items: center; gap: 12px; font-family: var(--serif); font-weight: 700; font-size: 22px; color: var(--cream); text-decoration: none; }
+  .brand img { width: 40px; height: 40px; }
+  nav a { color: var(--dim); text-decoration: none; font-size: 14px; margin-left: 24px; }
+  nav a:hover { color: var(--cream); }
+  .hero { text-align: center; padding: 56px 0 30px; }
+  .hero img.icon { width: 132px; height: 132px; filter: drop-shadow(0 18px 30px rgba(0,0,0,.55)); }
+  h1 { font-family: var(--serif); font-size: clamp(34px, 6vw, 60px); line-height: 1.08; margin: 22px auto 16px; max-width: 15ch; letter-spacing: -.01em; }
+  .lede { font-size: clamp(16px, 2.2vw, 19px); color: var(--dim); max-width: 56ch; margin: 0 auto 30px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; border-radius: 999px; font-weight: 700; font-size: 17px;
+    color: var(--ink); text-decoration: none; background: linear-gradient(135deg, #f5d185, var(--brass2));
+    border: 1px solid rgba(255,255,255,.35); box-shadow: 0 10px 30px rgba(219,173,92,.28); transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 14px 36px rgba(219,173,92,.4); }
+  .btn svg { width: 18px; height: 18px; }
+  .meta { margin-top: 14px; font-size: 13.5px; color: var(--faint); }
+  .shot { margin: 44px auto 0; border-radius: 18px; overflow: hidden; border: 1px solid rgba(219,173,92,.35); box-shadow: 0 40px 90px rgba(0,0,0,.6); background: var(--bg2); }
+  .shot img { display: block; width: 100%; height: auto; }
+  section { padding: 76px 0 0; }
+  h2 { font-family: var(--serif); font-size: clamp(26px, 4vw, 38px); line-height: 1.15; margin: 0 0 12px; }
+  .kicker { font-size: 11.5px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--brass); margin-bottom: 10px; }
+  .sub { color: var(--dim); max-width: 60ch; margin: 0 0 30px; font-size: 16.5px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card { background: var(--panel); border: 1px solid var(--stroke); border-radius: 18px; padding: 22px; }
+  .card h3 { font-family: var(--serif); font-size: 19px; margin: 0 0 7px; }
+  .card p { margin: 0; color: var(--dim); font-size: 14.5px; }
+  .dot { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; margin-bottom: 14px; font-weight: 800; font-size: 14px; color: var(--ink); background: linear-gradient(135deg, #f5d185, var(--brass2)); }
+  .split { display: grid; grid-template-columns: 1fr 1.25fr; gap: 40px; align-items: center; }
+  .split .shot { margin: 0; }
+  ol.steps { list-style: none; padding: 0; margin: 0; counter-reset: s; display: grid; gap: 14px; }
+  ol.steps li { counter-increment: s; background: var(--panel); border: 1px solid var(--stroke); border-radius: 16px; padding: 18px 20px 18px 62px; position: relative; color: var(--dim); font-size: 15px; }
+  ol.steps li::before { content: counter(s); position: absolute; left: 18px; top: 17px; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; color: var(--ink); background: linear-gradient(135deg, #f5d185, var(--brass2)); }
+  ol.steps b { color: var(--cream); }
+  details { border-bottom: 1px solid var(--stroke); padding: 16px 2px; }
+  summary { cursor: pointer; font-weight: 600; font-size: 16px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--brass); font-weight: 700; }
+  details[open] summary::after { content: "–"; }
+  details p { color: var(--dim); margin: 10px 0 0; max-width: 70ch; font-size: 15px; }
+  .cta { text-align: center; padding: 84px 0 30px; }
+  footer { border-top: 1px solid var(--stroke); margin-top: 60px; padding: 26px 0 44px; color: var(--faint); font-size: 13px; }
+  footer p { margin: 0 0 6px; }
+  @media (max-width: 760px) {
+    .split { grid-template-columns: 1fr; gap: 24px; }
+    nav a { margin-left: 16px; }
+    nav a.hide { display: none; }
+    section { padding-top: 58px; }
+    .hero { padding-top: 34px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="#"><img src="assets/icon.png" alt="">Jsolator</a>
+    <nav>
+      <a class="hide" href="#features">Features</a>
+      <a class="hide" href="#install">Install</a>
+      <a class="hide" href="#questions">Questions</a>
+      <a href="#download">Download</a>
+    </nav>
+  </header>
+
+  <div class="hero" id="download">
+    <img class="icon" src="assets/icon.png" alt="Jsolator app icon" width="132" height="132">
+    <h1>Play any song. Pull it apart.</h1>
+    <p class="lede">Jsolator is a free Mac app that plays your music and splits any song into vocals, drums, bass, guitar and piano. Everything runs on your own Mac.</p>
+    <a class="btn" data-download href="https://github.com/jsolator/jsolator/releases/download/v1.3.0/Jsolator-1.3.0.dmg">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>
+      Download for Mac
+    </a>
+    <div class="meta"><span data-version>Version 1.3.0</span> · <span data-size>97 MB</span> · Free · Apple Silicon Mac (M1 or newer), macOS 14 or later</div>
+    <div class="shot"><img src="assets/mixer.jpg" alt="Jsolator showing a song split into lead vocal, backing vocals, drums, bass, guitar, piano and other, with lyrics alongside" width="1700" height="1287"></div>
+  </div>
+
+  <section id="features">
+    <div class="kicker">What it does</div>
+    <h2>A record player that can take the band apart</h2>
+    <p class="sub">Listen first. When you want the vocal on its own, or the song without it, one button splits it.</p>
+    <div class="grid">
+      <div class="card"><div class="dot">1</div><h3>Studio-grade splitting</h3><p>Vocals and instrumental, or the full band: lead and backing vocals, drums, bass, guitar, piano and the rest. Each on its own fader, with mute and solo.</p></div>
+      <div class="card"><div class="dot">2</div><h3>Private by design</h3><p>Splitting happens on your Mac's own chip. Your music is never uploaded anywhere.</p></div>
+      <div class="card"><div class="dot">3</div><h3>Change key and speed</h3><p>Shift a song up or down by semitones, slow it down to learn a part, and export it that way.</p></div>
+      <div class="card"><div class="dot">4</div><h3>Lyrics, key, tempo, chords</h3><p>Timed lyrics follow the singing. The key, tempo and chords are worked out for you.</p></div>
+      <div class="card"><div class="dot">5</div><h3>Playlists and favourites</h3><p>Keep the songs you practise in playlists, mark favourites, and let the library play through.</p></div>
+      <div class="card"><div class="dot">6</div><h3>Export anything</h3><p>Save any stem, or your own mix of them, as WAV, FLAC or M4A.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="split">
+      <div>
+        <div class="kicker">Just listen</div>
+        <h2>It is a music player too</h2>
+        <p class="sub">Drop in a file or search for a song and it plays straight away, with a waveform to jump around in, timed lyrics and a play bar that moves with the music. Split it later, or never.</p>
+      </div>
+      <div class="shot"><img src="assets/player.jpg" alt="Jsolator playing a song with a spinning record, waveform and play bar" width="1700" height="1360" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section id="install">
+    <div class="kicker">Install</div>
+    <h2>Up and running in a minute</h2>
+    <p class="sub">The download is small. The separation model (about 700 MB) is fetched once, the first time you split a song.</p>
+    <ol class="steps">
+      <li><b>Download</b> and open <b>Jsolator.dmg</b>, then drag Jsolator into your Applications folder.</li>
+      <li><b>Open Jsolator.</b> The first time, macOS may say it can't verify the app. If it does, open <b>System Settings → Privacy &amp; Security</b>, scroll down and click <b>Open Anyway</b>. You only do this once.</li>
+      <li><b>Add a song</b> and press play. Click <b>Split into Stems</b> whenever you want it taken apart.</li>
+    </ol>
+  </section>
+
+  <section id="questions">
+    <div class="kicker">Questions</div>
+    <h2>Good to know</h2>
+    <details><summary>Is it really free?</summary><p>Yes. Jsolator is free to download and use while it is in testing.</p></details>
+    <details><summary>Which Macs does it run on?</summary><p>Macs with Apple Silicon (M1, M2, M3, M4 or newer) on macOS 14 or later. 16 GB of memory is comfortable; 8 GB works in the app's low-memory mode. Intel Macs are not supported.</p></details>
+    <details><summary>How long does a split take?</summary><p>On a recent Mac, about half a minute for a four-minute song at Fast quality, about a minute at High, and around three minutes at Studio quality.</p></details>
+    <details><summary>How do I get updates?</summary><p>Jsolator checks this site for a new version and offers it in the app. One click downloads it, checks that it really comes from us, and reopens the app on the new version.</p></details>
+    <details><summary>Does my music leave my Mac?</summary><p>No. Splitting, lyrics from the vocal, key and chord detection all run on your Mac. Looking up lyrics online sends only the song's title, artist and length.</p></details>
+    <details><summary>What can I use it with?</summary><p>Music you own or have the right to use. Please respect the rights of artists and the terms of any service you take music from.</p></details>
+  </section>
+
+  <div class="cta">
+    <h2>Give it a spin</h2>
+    <p class="sub" style="margin: 0 auto 26px;">Free for Apple Silicon Macs.</p>
+    <a class="btn" data-download href="https://github.com/jsolator/jsolator/releases/download/v1.3.0/Jsolator-1.3.0.dmg">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>
+      Download for Mac
+    </a>
+    <div class="meta"><span data-version>Version 1.3.0</span> · <span data-size>97 MB</span></div>
+  </div>
+
+  <footer>
+    <p>© <span id="year">2026</span> Jsolator. Made for people who love records.</p>
+    <p>Song shown in the screenshots: “Here Lies” and “Swansong” by Josh Woodward, used under a Creative Commons Attribution licence.</p>
+  </footer>
+</div>
+<script>
+  // The download button always points at the newest release listed in the update feed.
+  document.getElementById('year').textContent = new Date().getFullYear();
+  fetch('appcast.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (rel) {
+    if (!rel || !rel.version) return;
+    var href = rel.download || ('downloads/Jsolator-' + rel.version + '.dmg');
+    try { var u = new URL(href, location.href); if (u.host === 'jsolator.com' && location.host !== 'jsolator.com') href = u.pathname.replace(/^\//, ''); } catch (e) {}
+    document.querySelectorAll('[data-download]').forEach(function (a) { a.href = href; });
+    document.querySelectorAll('[data-version]').forEach(function (s) { s.textContent = 'Version ' + rel.version; });
+    if (rel.downloadSize) document.querySelectorAll('[data-size]').forEach(function (s) { s.textContent = Math.round(rel.downloadSize / 1048576) + ' MB'; });
+  }).catch(function () {});
+</script>
+</body>
+</html>
