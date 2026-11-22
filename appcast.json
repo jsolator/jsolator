@@ -1,9 +1,9 @@
 {
-  "version": "1.4.2",
-  "url": "https://github.com/jsolator/jsolator/releases/download/v1.4.2/Jsolator-1.4.2.zip",
-  "signature": "P8rOTNCzGDI8gvtxR0FBD8vFui+8icDe25QKUXxs8ySQZg6SQzO3X349slu15K+cgZBPRbXt/GU40LCYrVPBAw==",
-  "size": 128690673,
-  "notes": "New sheets are counted at a comfortable tempo automatically, the chord chart spreads each lyric line across the bars it is sung in, and the sheet editor was stress-tested with hundreds of random edits.",
-  "download": "https://github.com/jsolator/jsolator/releases/download/v1.4.2/Jsolator-1.4.2.dmg",
-  "downloadSize": 144248192
+  "version": "1.4.3",
+  "url": "https://github.com/jsolator/jsolator/releases/download/v1.4.3/Jsolator-1.4.3.zip",
+  "signature": "rZJQRetcifj7tmqKqRZmJ55Gz/Hq1yBR4CG2zChB051SWpBaz/vlMfhoieHbeakYr6vK7WthR51PMaqVEgHQDw==",
+  "size": 128701269,
+  "notes": "Songs you only added to listen to now have a one-click Sheet Music button that splits the song into the full band and then writes its sheet music. The first-run model download and the offline sheet fallback were also tested.",
+  "download": "https://github.com/jsolator/jsolator/releases/download/v1.4.3/Jsolator-1.4.3.dmg",
+  "downloadSize": 143290101
 }
