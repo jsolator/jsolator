@@ -1,9 +1,9 @@
 {
-  "version": "1.4.0",
-  "url": "https://github.com/jsolator/jsolator/releases/download/v1.4.0/Jsolator-1.4.0.zip",
-  "signature": "AJuKmb6D9yNdh7Cvyim3yLn3rBT4TJdOjoRKP48rk069MShHvs5nM6IQgWrRZkiFDy25kY/wkm+uRp/BabtLAQ==",
-  "size": 128681519,
-  "notes": "Sheet music: Jsolator now writes a lead sheet, chord chart, full score, guitar tab and instrument parts from a split song, follows along as it plays, lets you fix notes and chords by hand, and exports PDF, MusicXML and MIDI. Also: songs from links start playing in a few seconds, richer chords, and library filters by artist, genre and composer.",
-  "download": "https://github.com/jsolator/jsolator/releases/download/v1.4.0/Jsolator-1.4.0.dmg",
-  "downloadSize": 143702900
+  "version": "1.4.1",
+  "url": "https://github.com/jsolator/jsolator/releases/download/v1.4.1/Jsolator-1.4.1.zip",
+  "signature": "4fOgwBkd14O+gNfizimFksGB94bwapGyT72D9To00O4SlcfCs42fIFUdG0dAEXhO+P8n4xl/c1TMue+j/K2dCg==",
+  "size": 128690520,
+  "notes": "Sheets now pick up lyrics that arrive after the sheet was written, the view tabs show as many as fit with the rest under a more menu, the tempo menu wording is corrected, and very slow songs are written at a count that is easier to read.",
+  "download": "https://github.com/jsolator/jsolator/releases/download/v1.4.1/Jsolator-1.4.1.dmg",
+  "downloadSize": 142347916
 }
