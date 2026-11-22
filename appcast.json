@@ -1,9 +1,9 @@
 {
-  "version": "1.4.1",
-  "url": "https://github.com/jsolator/jsolator/releases/download/v1.4.1/Jsolator-1.4.1.zip",
-  "signature": "4fOgwBkd14O+gNfizimFksGB94bwapGyT72D9To00O4SlcfCs42fIFUdG0dAEXhO+P8n4xl/c1TMue+j/K2dCg==",
-  "size": 128690520,
-  "notes": "Sheets now pick up lyrics that arrive after the sheet was written, the view tabs show as many as fit with the rest under a more menu, the tempo menu wording is corrected, and very slow songs are written at a count that is easier to read.",
-  "download": "https://github.com/jsolator/jsolator/releases/download/v1.4.1/Jsolator-1.4.1.dmg",
-  "downloadSize": 142347916
+  "version": "1.4.2",
+  "url": "https://github.com/jsolator/jsolator/releases/download/v1.4.2/Jsolator-1.4.2.zip",
+  "signature": "P8rOTNCzGDI8gvtxR0FBD8vFui+8icDe25QKUXxs8ySQZg6SQzO3X349slu15K+cgZBPRbXt/GU40LCYrVPBAw==",
+  "size": 128690673,
+  "notes": "New sheets are counted at a comfortable tempo automatically, the chord chart spreads each lyric line across the bars it is sung in, and the sheet editor was stress-tested with hundreds of random edits.",
+  "download": "https://github.com/jsolator/jsolator/releases/download/v1.4.2/Jsolator-1.4.2.dmg",
+  "downloadSize": 144248192
 }
