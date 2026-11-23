@@ -1,9 +1,9 @@
 {
-  "version": "1.5.0",
-  "url": "https://github.com/jsolator/jsolator/releases/download/v1.5.0/Jsolator-1.5.0.zip",
-  "signature": "x3uUjDLbEs3sU3AWRwkhK4JcNJk1ECnJT52F45HlM5gdxsqHbw0c7ITGq/ZF8jvaAoOg/S6cHjTDf34VcalkDw==",
-  "size": 128767970,
-  "notes": "Import sheet music from a PDF, a photo or MusicXML, then edit it, play it and change its key. New Key menu moves a whole sheet to another key. Cancelling a split no longer removes the song, sheet music now hears both stereo channels, and 16 other fixes.",
-  "download": "https://github.com/jsolator/jsolator/releases/download/v1.5.0/Jsolator-1.5.0.dmg",
-  "downloadSize": 144947732
+  "version": "1.5.1",
+  "url": "https://github.com/jsolator/jsolator/releases/download/v1.5.1/Jsolator-1.5.1.zip",
+  "signature": "bdOwu9ADGQEMCJv+uUahsMVefYS9CjS6fGeQxNePvGPbfFMFsjBe8ndonLVHm3mgVMaVxOktUplHFsQhNKh4BQ==",
+  "size": 128783614,
+  "notes": "Fixes separation failing to start on macOS 14 (Sonoma).",
+  "download": "https://github.com/jsolator/jsolator/releases/download/v1.5.1/Jsolator-1.5.1.dmg",
+  "downloadSize": 144459744
 }
