@@ -1,9 +1,9 @@
 {
-  "version": "1.5.1",
-  "url": "https://github.com/jsolator/jsolator/releases/download/v1.5.1/Jsolator-1.5.1.zip",
-  "signature": "bdOwu9ADGQEMCJv+uUahsMVefYS9CjS6fGeQxNePvGPbfFMFsjBe8ndonLVHm3mgVMaVxOktUplHFsQhNKh4BQ==",
-  "size": 128783614,
-  "notes": "Fixes separation failing to start on macOS 14 (Sonoma).",
-  "download": "https://github.com/jsolator/jsolator/releases/download/v1.5.1/Jsolator-1.5.1.dmg",
-  "downloadSize": 144459744
+  "version": "1.5.2",
+  "url": "https://github.com/jsolator/jsolator/releases/download/v1.5.2/Jsolator-1.5.2.zip",
+  "signature": "eox0zl5ufA/ewJDKsLtA9qQ7FNAgqVJa/Yj6Y71LkLliLmgJT4MbY7xIYNs3RH7CcmJl5Sr2nYWL3hTNAlSGDw==",
+  "size": 128784589,
+  "notes": "Hear on the chord chart plays the chords. Click anywhere in a bar of the sheet to jump the song there.",
+  "download": "https://github.com/jsolator/jsolator/releases/download/v1.5.2/Jsolator-1.5.2.dmg",
+  "downloadSize": 141607067
 }
