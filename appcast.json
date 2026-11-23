@@ -1,9 +1,9 @@
 {
-  "version": "1.5.2",
-  "url": "https://github.com/jsolator/jsolator/releases/download/v1.5.2/Jsolator-1.5.2.zip",
-  "signature": "eox0zl5ufA/ewJDKsLtA9qQ7FNAgqVJa/Yj6Y71LkLliLmgJT4MbY7xIYNs3RH7CcmJl5Sr2nYWL3hTNAlSGDw==",
-  "size": 128784589,
-  "notes": "Hear on the chord chart plays the chords. Click anywhere in a bar of the sheet to jump the song there.",
-  "download": "https://github.com/jsolator/jsolator/releases/download/v1.5.2/Jsolator-1.5.2.dmg",
-  "downloadSize": 141607067
+  "version": "1.5.3",
+  "url": "https://github.com/jsolator/jsolator/releases/download/v1.5.3/Jsolator-1.5.3.zip",
+  "signature": "uHlDanhW8qNVQ9d8MvzYOBPbarQR4W3AQqQunSZT2sb5T9XekvDwSw5qeppvmytFergYIDRWu8TmPBhS6y9vAg==",
+  "size": 130471245,
+  "notes": "Drums are written by a trained drum model (ADTOF): toms high/mid/floor, crash and ride. Instrumental songs get a Melody part from the instrument playing the tune.",
+  "download": "https://github.com/jsolator/jsolator/releases/download/v1.5.3/Jsolator-1.5.3.dmg",
+  "downloadSize": 147163758
 }
