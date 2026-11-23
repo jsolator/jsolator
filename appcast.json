@@ -1,9 +1,9 @@
 {
-  "version": "1.5.3",
-  "url": "https://github.com/jsolator/jsolator/releases/download/v1.5.3/Jsolator-1.5.3.zip",
-  "signature": "uHlDanhW8qNVQ9d8MvzYOBPbarQR4W3AQqQunSZT2sb5T9XekvDwSw5qeppvmytFergYIDRWu8TmPBhS6y9vAg==",
-  "size": 130471245,
-  "notes": "Drums are written by a trained drum model (ADTOF): toms high/mid/floor, crash and ride. Instrumental songs get a Melody part from the instrument playing the tune.",
-  "download": "https://github.com/jsolator/jsolator/releases/download/v1.5.3/Jsolator-1.5.3.dmg",
-  "downloadSize": 147163758
+  "version": "1.5.4",
+  "url": "https://github.com/jsolator/jsolator/releases/download/v1.5.4/Jsolator-1.5.4.zip",
+  "signature": "ZCGOJENAWKr/2UQrvpBKQLN4EK09X4NkGHbp7yhS73AXt++ZPjVED7vj45fKwW18zLShJ8XraycQqqfCPlrXAw==",
+  "size": 130516169,
+  "notes": "New: a Saxophone stem. Turn it on when you split a song, or right-click a split song and choose Pull Out the Saxophone. When a song has no singer, the sheet music writes the sax as the melody.\nNew: Split the Drums. Right-click a split song to turn its Drums into Kick, Snare, Toms, Hi-hat and Cymbals tracks, and Put the Drums Back Together any time.\nFixed: very long recordings (like hour-long compilations) no longer run out of memory. Jsolator now works through them in pieces, and tells you up front if one is too long for this Mac.",
+  "download": "https://github.com/jsolator/jsolator/releases/download/v1.5.4/Jsolator-1.5.4.dmg",
+  "downloadSize": 147290585
 }
